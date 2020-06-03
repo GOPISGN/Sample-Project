@@ -23,7 +23,11 @@ pipeline {
 						bat 'echo "Testcase for positive scenario is successful"'
 					}
 				}
-				
+				stage('Sleep') {
+					steps {
+						bat 'timeout 5'
+					}
+				}
 				stage('Stage 3: Run the test for negative scenario') {
 					steps {
 						bat 'echo "Lets run the test for negative scenario"'
