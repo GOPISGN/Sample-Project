@@ -19,7 +19,7 @@ pipeline {
 				stage('Stage 2 : Run the test for positive scenario') {
 					steps {
 						bat 'echo "Lets run the test for positive scenario"'
-						bat 'python Hello.py "5"'
+						bat 'python Sample.py "5"'
 						bat 'echo "Testcase for positive scenario is successful"'
 					}
 				}
@@ -27,7 +27,7 @@ pipeline {
 				stage('Stage 3: Run the test for negative scenario') {
 					steps {
 						bat 'echo "Lets run the test for negative scenario"'
-						bat 'python Hello.py "-1"'
+						bat 'python Sample.py "-1"'
 						bat 'echo "Testcase for negative scenario is successful"'
 					}
 				}
@@ -35,7 +35,7 @@ pipeline {
 				stage('Stage 4 : Run the test for exception') {
 					steps {
 						bat 'echo "Lets run the test for exception scenario"'
-						bat 'python Hello.py "string"'
+						bat 'python Sample.py "string"'
 						bat 'echo "Testcase for exception scenario is successful"'
 					}
 				}
