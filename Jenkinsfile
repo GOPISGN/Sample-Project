@@ -42,4 +42,19 @@ pipeline {
 			}
 		}
 	}
+	post {
+		always {
+			bat 'echo "Cleanup the workspace"'
+			bat 'deletedir()
+		}
+		success {
+			bat 'echo "Run Success"'
+		}
+		unstable {
+			bat 'echo "Run is Unstable"'
+		}
+		failure {
+			bat 'echo "Run Failed"'
+		}
+	}
 }
