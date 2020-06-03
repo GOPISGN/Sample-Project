@@ -45,7 +45,7 @@ pipeline {
 	post {
 		always {
 			bat 'echo "Cleanup the workspace"'
-			bat 'deletedir()
+			bat 'deletedir()'
 		}
 		success {
 			bat 'echo "Run Success"'
