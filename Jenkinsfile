@@ -26,6 +26,7 @@ pipeline {
 				stage('Sleep') {
 					steps {
 						bat 'timeout 5'
+						bat 'echo "Waited for 5 seconds"'
 					}
 				}
 				stage('Stage 3: Run the test for negative scenario') {
