@@ -2,6 +2,13 @@ pipeline {
 	agent any
      
 	stages {
+		
+		stage('Build') {
+			steps {
+				git 'https://github.com/GOPISGN/Sample-Project.git'
+			}
+		}
+
 		stage('Stage 1 : Check Python Installed or not -- Pre-requestic') {
 			steps {
 				bat 'echo off'
