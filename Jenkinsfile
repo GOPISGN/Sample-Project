@@ -25,7 +25,7 @@ pipeline {
 				}
 				stage('Sleep') {
 					steps {
-						bat 'timeout 5'
+						bat 'waitfor SomethingThatIsNeverHappening /t 5 >nul 2>&1'
 						bat 'echo "Waited for 5 seconds"'
 					}
 				}
