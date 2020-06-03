@@ -45,7 +45,6 @@ pipeline {
 	post {
 		always {
 			bat 'echo "Cleanup the workspace"'
-			bat 'rmdir /Q /S "C:\\Program Files (x86)\\Jenkins\\workspace\\"'
 		}
 		success {
 			bat 'echo "Run Success"'
